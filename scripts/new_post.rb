@@ -13,14 +13,14 @@ formatted_time = current_time.strftime("%Y-%m-%d %H:%M:%S")
 filename_prefix = formatted_time.slice(0, 10)
 
 # パラメータチェク
-if ARGV.length < 2
+if ARGV.length < 1
     puts "please enter title and subtitle"
     exit
 end
 
 # タイトルとサブタイトルの取得
 title = ARGV[0]
-subtitle = ARGV[1]
+subtitle = ARGV[1] || ''
 
 # 内容生成
 post_template = <<~TEMPLATE
